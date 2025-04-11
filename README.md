@@ -1,9 +1,10 @@
 
 # FX Interview Task
 
-- Create a functional home screen with both landscape and portrait rails using SceneGraph components like RowList or MarkupGrid.
-- Populate these rails with the content (the data will be shared) to demonstrate the layout and navigation.
-- The hero changes the information displayed depending on what card is currently focused.
+- Build a functional home screen using SceneGraph components such as RowList or MarkupGrid, featuring both portrait and landscape content rails.
+- Populate these rails with the provided data to showcase layout and navigation functionality.
+- Implement dynamic hero content that updates based on the currently focused card.
+- Create a detail page for movies selected from the rails. The description should be limited to two lines initially. If the text overflows, include a "Read More" button below. Clicking this button should expand the full description and toggle the button text to "Read Less".
 
 # Rowlist Details
 
