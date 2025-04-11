@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MainScene" extends="Scene" >
+    <children>
+        <LandingScreen id="LandingScreen" visible="false" translation="[0,0]"/>
+    </children>
+    <interface>
+        <field id="appLaunchCompleted" type="bool" alias="LandingScreen.launchBeacon" alwaysNotify="true" onChange="OnAppLaunchCompleted" />
+    </interface>
+    <script type="text/brightscript" uri="pkg:/components/mainScene.brs" />
+</component>

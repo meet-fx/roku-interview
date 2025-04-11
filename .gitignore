@@ -1,0 +1,6 @@
+.DS_Store
+out/*
+.vscode/launch.json
+TrackerTask.xml
+build
+build.zip

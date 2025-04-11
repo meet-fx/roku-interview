@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<component name="LandingScreen" extends="BaseScreen" initialFocus="moviesList">
+
+    <children>
+        <Poster
+            id="heroBanner"
+            translation="[ 0, 0 ]"
+            width="1920"
+            height="1080"
+            loadWidth="1920"
+            loadHeight="1080"
+            loadDisplayMode="scaleToZoom"
+        />
+
+        <Poster
+            id="gradientLayer"
+            translation="[ 0, 0 ]"
+            loadDisplayMode="scaleToFit"
+            uri="pkg:/images/hero-gradient.png"
+        />
+
+        <Label
+            id="loading"
+            horizAlign="center"
+            vertAlign="center"
+            text="Loading..."
+            visible="true"
+            translation="[ 0, 0 ]">
+
+            <Font
+                role="font"
+                uri="pkg:/fonts/Poppins.ttf"
+                size="50" />
+        </Label>
+
+        <RowList
+            id="RowList"
+            itemComponentName="rowitem"
+            focusXOffset="[40]"
+            itemSize="[1920,120]"
+            numRows="2"
+            fadeFocusFeedbackWhenAutoScrolling="false"
+            focusBitmapBlendColor="0xFFFFFF"
+            rowFocusAnimationStyle="fixedFocusWrap"
+            vertFocusAnimationStyle="fixedFocus"
+            rowHeights="[380,620]"
+            rowItemSize="[[476,273],[254,382]]"
+            rowItemSpacing="[[40,0]]"
+            rowLabelOffset="[[35,20]]"
+            showRowLabel="[true, true]"
+            translation="[60,488]" />
+
+    </children>
+
+    <interface>
+        <field id="launchBeacon" type="bool" alwaysnotify="true" />
+        <field id="content" type="node" alias="RowList.content" />
+        <field id="focusedContent" type="node" />
+        <field id="itemFocused" type="intarray" alias="RowList.rowItemFocused"
+            onChange="onItemFocused" />
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/screens/landing/LandingScreen.brs" />
+</component>
